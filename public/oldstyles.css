@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --colorGreen: #93e24e;
+  --colorWhite: white;
+  --colorRed: #e66161;
+  --colorPaleRed: #e9c0c0;
+  --font_Roboto: "Roboto Slab", serif;
+  --font_Rubik: "Rubik", sans-serif;
+}
+
+/* fontsinfo: https://fonts.google.com/specimen/Roboto+Slab?query=roboto+slab&sidebar.open=true&selection.family=Roboto+Slab:wght@400;700|Rubik:wght@700   
+"Rubik" is for Bold 700 for the Titel 
+"Roboto slab" is for Bold 700 and Regular 400 
+*/
+
+html {
+  font-family: var(--font_Roboto);
+  font-size: 16px;
+}
+
+body {
+  text-align: center;
+  margin: 0;
+}
+
+.main {
+  max-width: 50rem;
+  background-color: var(--colorRed);
+  text-align: left;
+  margin: 2em auto;
+  padding: 2em 9em;
+}
+
+.main h1 {
+  text-transform: capitalize;
+  color: var(--colorWhite);
+  font-size: 2em;
+  line-height: 1.6em;
+  font-family: var(--font_Rubik);
+}
+
+.main > h1 > span {
+  display: block;
+}
+
+.main > h1 > span:nth-child(2) {
+  color: var(--colorGreen);
+  text-transform: lowercase;
+  font-size: 2em;
+  margin: -13px 0px -11px -4px;
+}
+
+#instructions {
+  color: var(--colorWhite);
+  font-size: 0.9rem;
+  padding: 0;
+  list-style-position: inside;
+  max-width: 380px;
+}
+
+.main p {
+  font-size: 0.9em;
+  color: var(--colorPaleRed);
+  margin: 2em 0 0 0;
+}
+
+.inputArea {
+  height:3em;
+  margin-top: 1em;
+  border-radius: 6px;
+  list-style-type: none;
+  background-color: var(--colorGreen);
+  font-size: 18px;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+}
+.inputArea input {
+  flex-grow: 1;
+  font-size: inherit;
+  font-family: inherit;
+  border: unset;
+  background: unset;
+  margin: 0 1em;
+}
+.inputArea input:focus {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.inputArea input:focus::placeholder {
+  color: transparent;
+}
+.inputArea button {
+  font-size: inherit;
+  font-family: inherit;
+  align-self: stretch;
+  border: unset;
+  background: unset;
+  border-radius: 0 6px 6px 0;
+  border-left: solid 1px var(--colorRed);
+  padding: 0.6em 1.5em;
+  font-weight: 700;
+  cursor: pointer;
+}
+.inputArea button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: all 0.25s;
+}
+
+.shadow,
+#task-list > li {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+#task-list {
+  padding: 0;
+}
+
+#task-list > li  {
+  height:3em;
+  margin-top: 1em;
+  background-color: var(--colorWhite);
+  border-radius: 6px;
+  list-style-type: none;
+  font-size: 18px;
+  transition: 0.2s;
+  display: flex;
+  align-items: stretch;
+}
+#task-list > li:hover {
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 14px 28px, rgba(0, 0, 0, 0.5) 0px 5px 5px;
+  transition: all 0.25s;
+}
+
+
+.text {
+  padding: 0em 1em;
+  flex-grow: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/*.checked .text { 
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" enable-background="new 0 0 512 512" xml:space="preserve" viewBox="0 0 24 24"><path style="fill: green"  d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>' ), auto; 
+}*/
+
+
+input.text {
+  font-size: inherit;
+  font-family: inherit;
+  border: unset;
+  background: unset;
+  align-self: center;
+  margin: 0em 1em;
+  padding: 0;
+  border-bottom: solid rgb(143, 134, 134) 1px;
+}
+.bttn {
+  display: block;
+  width: 2.5em;
+  background-size: 1em;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.confirm {
+  background-image: url(./img/check-solid.svg);
+}
+.abort {
+  background-image: url(./img/times-solid.svg);
+  background-size: 0.9em;
+  border-radius: 0 6px 6px 0;
+}
+.edit {
+  background-image: url(./img/pen-solid.svg);
+}
+.delete {
+  background-image: url(./img/trash-solid.svg);
+  border-radius: 0 6px 6px 0;
+  background-size: 0.9em;
+}
+.bttn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+  
+#task-list > li.checked {
+  background-color: rgba(125, 77, 77, 0.5) !important;
+  padding: 0 0 0 40px;
+  opacity: .7;
+}
+ 
+#task-list > li.checked > .text {
+  text-decoration: line-through;
+  font-style: italic;
+  font-size: .9em;
+}
+
+#task-list > li.checked > .edit {
+  display: none;
+}
+
+
+/* responsive Styling for Mobile devices*/
+@media only screen and (max-width: 768px) {
+  .main {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
+/* just for the mockup*/
+
+.mockup {
+  padding-top: 6rem;
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.mockup img {
+  width: 100%;
+}
+.license {
+  margin-top: 6em;
+  display: block;
+  text-align: right;
+  font-size: 0.8em;
+  width: 100%;
+  opacity: 0.8;
+}
+.license > a {
+  color:inherit;
+
+}

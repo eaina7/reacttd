@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo-List Group 2</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://www.make-mobile.de/webportal/assets/images/favicon/favicon-32x32_fingerprint.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Rubik:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <h1><span>NOT</span><span>todo</span><span>LIST</span></h1>
+      <ol id="instructions">
+        <li>Write down things not to do.</li>
+        <li>
+          If someone asks you to do said thing, just reply with: "Sorry, but
+          that's on my Not Todo List."
+        </li>
+        <li>
+          If you successfully avoided doing said thing, cross it of your list.
+        </li>
+      </ol>
+      <form action="">
+        <p>What are you NOT doing today:</p>
+        <div class="inputArea shadow">
+          <input
+            type="text"
+            name="task"
+            id="task"
+            placeholder="your Task"
+          />
+          <button id="add">Add</button>
+        </div>
+      </form>
+      <div>
+        <p>Things not to do:</p>
+        <ul id="task-list"></ul>
+      </div>
+      <i class="license">icons by fontawesome -  <a href="https://fontawesome.com/license">license</a></i>
+    </div>
+    
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import Form from "./components/Form"
+import Todolist from "./components/Todolist"
+import "./components/styles.css"
+
+
+
 
 function App() {
+  let [inputValue, setInputValue]= useState ("");
+  let [todos, setTodos] = useState([]);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className = "main">
+     <h1><span>NOT</span><span>todo</span><span>LIST</span></h1>
+      <ol id="instructions">
+        <li>Write down things not to do.</li>
+        <li>
+          If someone asks you to do said thing, just reply with: "Sorry, but
+          that's on my Not Todo List."
+        </li>
+        <li>
+          If you successfully avoided doing said thing, cross it of your list.
+        </li>
+      </ol>
+      
+      <Form inputValue = {inputValue} todos = {todos} setTodos = {setTodos} setInputValue = {setInputValue}/>
+      <Todolist setTodos = {setTodos} todos = {todos} />
     </div>
   );
 }

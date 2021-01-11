@@ -244,7 +244,9 @@
 }
 
 .trash-btn,
-.complete-btn {
+.complete-btn,
+.cancel-btn
+{
   background: #ff6f47;
   color: white;
   border: none;

@@ -6,9 +6,13 @@ import "./components/styles.css"
 
 
 
+
 function App() {
   let [inputValue, setInputValue]= useState ("");
   let [todos, setTodos] = useState([]);
+  
+  
+  
   
   return (
         <div className = "main">
@@ -24,7 +28,7 @@ function App() {
         </li>
       </ol>
       
-      <Form inputValue = {inputValue} todos = {todos} setTodos = {setTodos} setInputValue = {setInputValue}/>
+      <Form inputValue = {inputValue} todos = {todos} setTodos = {setTodos} setInputValue = {setInputValue} />
       <Todolist setTodos = {setTodos} todos = {todos} />
     </div>
   );

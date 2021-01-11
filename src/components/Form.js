@@ -12,6 +12,8 @@ function Form({setInputValue,inputValue,todos,setTodos }) {
         setTodos ([...todos, {text:inputValue, completed: false, id:Math.random()*1000}]);
         setInputValue =("");
 
+   
+
     };
     return (
          
